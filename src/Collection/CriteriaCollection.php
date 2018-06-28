@@ -13,6 +13,11 @@ class CriteriaCollection implements CriteriaInterface
         return OneOfCriteriaCollection::create($criteria);
     }
 
+    public static function allOf(array $criteria): AllOfCriteriaCollection
+    {
+        return AllOfCriteriaCollection::create($criteria);
+    }
+
     public function apply($query)
     {
         foreach ($this->criteria as $criteria) {
