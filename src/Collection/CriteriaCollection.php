@@ -3,6 +3,7 @@
 namespace Baethon\LaravelCriteria\Collection;
 
 use Baethon\LaravelCriteria\CriteriaInterface;
+use Baethon\LaravelCriteria\Traits\CollectionTrait;
 
 class CriteriaCollection implements CriteriaInterface
 {

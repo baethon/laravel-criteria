@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Baethon\LaravelCriteria\Collection;
+namespace Baethon\LaravelCriteria\Traits;
 
 use Baethon\LaravelCriteria\CriteriaInterface;
 
