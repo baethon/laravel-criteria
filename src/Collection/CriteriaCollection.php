@@ -6,16 +6,11 @@ use Baethon\LaravelCriteria\CriteriaInterface;
 
 class CriteriaCollection implements CriteriaInterface
 {
-    private $criteria = [];
+    use CollectionTrait;
 
-    private function __construct(CriteriaInterface ...$criteria)
+    public static function oneOf(array $criteria): OneOfCriteriaCollection
     {
-        $this->criteria = $criteria;
-    }
-
-    public static function create(array $criteria): self
-    {
-        return new CriteriaCollection(...$criteria);
+        return OneOfCriteriaCollection::create($criteria);
     }
 
     public function apply($query)
