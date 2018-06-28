@@ -1,0 +1,27 @@
+{
+    "name": "baethon/laravel-criteria",
+    "description": "Minimal interface for criteria pattern",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radoslaw Mejer",
+            "email": "radmen@radmen.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Baethon\\LaravelCriteria\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "test/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.2",
+        "illuminate/database": "^5.6"
+    }
+}
