@@ -140,6 +140,10 @@ Run tests with:
 ./vendor/bin/phpunit
 ```
 
+## Changelog
+
+Please see [CHANGELOG](https://github.com/baethon/laravel-criteria/blob/master/CHANGELOG.md) for more information what has changed recently.
+
 ## License
 
 The MIT License (MIT). Please see License File for more information.
