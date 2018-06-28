@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.1] - 2018-06-28
+### Changed
+- Set minimal PHP version (`>= 7.1`)
+
 ## [1.0.0] - 2018-06-28
 ### Added
 - Add `CriteriaInterface`
 - Add `CriteriaCollection`
 
-[Unreleased]: https://github.com/baethon/laravel-criteria/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/baethon/laravel-criteria/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/olivierlacan/keep-a-changelog/compare/c08816b...v1.0.0
