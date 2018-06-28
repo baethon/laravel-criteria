@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Test\Collection;
+namespace Test;
 
 use Test\Traits\UsesDatabase;
 use Test\Traits\ComparesQueries;

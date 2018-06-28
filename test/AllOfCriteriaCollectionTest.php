@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace Test\Collection;
+namespace Test;
 
 use Test\Traits\UsesDatabase;
 use Test\Traits\ComparesQueries;
 use Test\Stubs\CompareCriteria;
 use Baethon\LaravelCriteria\Collection\CriteriaCollection;
 
-class OneOfCriteriaCollectionTest extends \PHPUnit\Framework\TestCase
+class AllOfCriteriaCollectionTest extends \PHPUnit\Framework\TestCase
 {
     use UsesDatabase;
 
@@ -18,15 +18,11 @@ class OneOfCriteriaCollectionTest extends \PHPUnit\Framework\TestCase
         $query = $this->capsule->table('users');
         $expected = $this->capsule->table('users')
             ->where(function ($query) {
-                $query->orWhere(function ($innerQuery) {
-                    $innerQuery->where('name', 'Jon');
-                });
-                $query->orWhere(function ($innerQuery) {
-                    $innerQuery->where('lastname', 'Snow');
-                });
+                $query->where('name', 'Jon');
+                $query->where('lastname', 'Snow');
             });
 
-        CriteriaCollection::oneOf([
+        CriteriaCollection::allOf([
             CompareCriteria::create('name', 'Jon'),
             CompareCriteria::create('lastname', 'Snow'),
         ])->apply($query);
