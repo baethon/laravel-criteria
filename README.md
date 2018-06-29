@@ -16,7 +16,11 @@ Criteria are very similar to [Eloquent scopes](https://laravel.com/docs/eloquent
 composer require baethon/laravel-criteria
 ```
 
-## Laravel compatibility
+## Requirements
+
+* PHP >= 7.1
+
+### Laravel compatibility
 
 This library has no dependencies to Laravel itself. It should work with all versions of Laravel.
 
