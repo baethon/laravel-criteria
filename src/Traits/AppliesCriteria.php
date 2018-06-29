@@ -6,10 +6,10 @@ use Baethon\LaravelCriteria\CriteriaInterface;
 
 trait AppliesCriteria
 {
-    public function apply(CriteriaInterface $criteria)
+    public function scopeApply($query, CriteriaInterface $criteria)
     {
-        $criteria->apply($this);
+        $criteria->apply($query);
 
-        return $this;
+        return $query;
     }
 }

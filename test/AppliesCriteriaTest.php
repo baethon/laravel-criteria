@@ -2,22 +2,27 @@
 
 namespace Test;
 
+use Test\Stubs\UserModel;
+use Test\Traits\UsesDatabase;
+use Test\Stubs\CompareCriteria;
+use Test\Traits\ComparesQueries;
 use Baethon\LaravelCriteria\CriteriaInterface;
 use Baethon\LaravelCriteria\Traits\AppliesCriteria;
 
 class AppliesCriteriaTest extends \PHPUnit\Framework\TestCase
 {
+    use UsesDatabase;
+
+    use ComparesQueries;
+
     public function test_model_applies_criteria_to_itself()
     {
-        $model = new class () {
-            use AppliesCriteria;
-        };
+        $query = UserModel::query()
+            ->apply(CompareCriteria::create('name', 'Jon'));
 
-        $criteria = $this->createMock(CriteriaInterface::class);
-        $criteria->expects($this->once())
-            ->method('apply')
-            ->with($this->equalTo($model));
+        $expected = $this->capsule->table('users')
+            ->where('name', 'Jon');
 
-        $this->assertSame($model, $model->apply($criteria));
+        $this->assertEqualQueries($expected, $query);
     }
 }

@@ -21,5 +21,6 @@ trait UsesDatabase
         ]);
 
         $this->capsule->setAsGlobal();
+        $this->capsule->bootEloquent();
     }
 }
