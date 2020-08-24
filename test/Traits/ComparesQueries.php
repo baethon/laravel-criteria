@@ -6,7 +6,7 @@ trait ComparesQueries
 {
     public function assertEqualQueries($expected, $actual)
     {
-        $this->assertEquals($expected->toSql(), $actual->toSql());
-        $this->assertEquals($expected->getBindings(), $actual->getBindings());
+        $this->assertSame($expected->toSql(), $actual->toSql());
+        $this->assertSame($expected->getBindings(), $actual->getBindings());
     }
 }
