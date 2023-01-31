@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0]
+### Changed
+- Changed PHP version requirement to >=8.1
+- Updated dev dependencies
+- Use `laravel/pint` to lint the code style
+### Added
+- Github Actions integrations
+- Typehint for `Builder` in `CriteriaInterface::apply()`
+### Removed
+- TravisCi integration
+
 ## [1.0.2]
 ### Changed
 - Updated information about package requirements
@@ -22,7 +33,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add `CriteriaInterface`
 - Add `CriteriaCollection`
 
-[Unreleased]: https://github.com/baethon/laravel-criteria/compare/1.0.2...HEAD
+[Unreleased]: https://github.com/baethon/laravel-criteria/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/baethon/laravel-criteria/compare/1.1.0...1.0.2
 [1.0.2]: https://github.com/baethon/laravel-criteria/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/olivierlacan/keep-a-changelog/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/olivierlacan/keep-a-changelog/compare/c08816b...1.0.0
