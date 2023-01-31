@@ -1,16 +1,17 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Test;
 
-use Test\Traits\UsesDatabase;
-use Test\Traits\ComparesQueries;
-use Test\Stubs\CompareCriteria;
 use Baethon\LaravelCriteria\Collection\CriteriaCollection;
+use Test\Stubs\CompareCriteria;
+use Test\Traits\ComparesQueries;
+use Test\Traits\UsesDatabase;
 
 class CriteriaCollectionTest extends \PHPUnit\Framework\TestCase
 {
     use UsesDatabase;
-
     use ComparesQueries;
 
     public function test_it_applies_criteria_to_query()

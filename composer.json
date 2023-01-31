@@ -20,7 +20,7 @@
         }
     },
     "scripts": {
-        "lint": "php ./vendor/bin/phpcs --standard=psr2 src"
+        "lint": "php ./vendor/bin/pint --test"
     },
     "require": {
         "php": ">=8.1"
